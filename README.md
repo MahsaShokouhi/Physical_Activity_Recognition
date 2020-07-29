@@ -1,7 +1,7 @@
 # Physical_Activity_Recognition
 
 
-![Link_to_notebook] (https://github.com/MahsaShokouhi/Physical_Activity_Recognition/blob/master/notebook.ipynb)
+![Link_to_notebook](https://github.com/MahsaShokouhi/Physical_Activity_Recognition/blob/master/Physical_Activity_Recognition.ipynb)
 
 
 <br>
