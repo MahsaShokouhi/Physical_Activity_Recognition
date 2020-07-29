@@ -20,7 +20,7 @@ The provided data was already divided in train and test sets which included 7767
 
 The goal was to build the classification model which gives highest accuracy with cross-validation on the train set, and then use this model to predict the activity type on the test set.
 
-### Features Description
+#### <ins>Features Description</ins>
 Body motion parameters (3-axial (X, Y, Z) acceleration and 3-axial angular velocity) were extracted from the embedded accelerometer and gyroscope of the device. Body acceleration (BodyAcc) and gravity (GravityAcc) were extracted from the sensor acceleration signal, and the angular velocity was extracted from the gyroscope (BodyGyro). Jerk signals (tBodyAccJerk and tBodyGyroJerk) and the magnitude of these three-dimensional signals (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag) were also calculated. 
 A set of statistics on these parameters were used to obtain a 561-feature vector with time and frequency domain variables (prefixed by ‘t’ and ‘f’, respectively). These statistics included Mean, STD, Median absolute deviation (Mad), Min, Max, Signal magnitude area (SMA), Energy, Autorregresion coefficients (ARCoeff), Interquartile range (IQR), Signal entropy (Entropy), Correlation coefficient between two signals (Correlation), and Angle between to vectors (Angle), in addition to frequency-specific statistics: Index of the frequency component with largest magnitude (MaxInds), Skewness and Kurtosis of the frequency domain signal, Weighted average of the frequency components (MeanFreq), and Energy of a frequency interval (BandsEnergy).
 
