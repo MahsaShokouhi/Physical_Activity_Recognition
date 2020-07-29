@@ -1,6 +1,8 @@
 # Physical_Activity_Recognition
 
-![Link_to_notebook](https://github.com/MahsaShokouhi/Physical_Activity_Recognition/blob/master/notebook.ipynb)
+
+![Link_to_notebook] (https://github.com/MahsaShokouhi/Physical_Activity_Recognition/blob/master/notebook.ipynb)
+
 
 <br>
 
@@ -16,7 +18,9 @@ The provided data was already divided in train and test sets which included 7767
 *	X.txt: with 561 features representing body motion parameters for each observation.
 *	y.txt: target variable ranging from 1 to 12, each corresponding to an activity group.
 
-![Table 1](/images/Table1.png)
+
+<img src="/images/Table1.png" width=500>
+
 
 The goal was to build the classification model which gives highest accuracy with cross-validation on the train set, and then use this model to predict the activity type on the test set.
 
@@ -29,17 +33,13 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 ## Exploratory Data Analysis
 *	There were no common subjects between the train and test sets and all records of each subject were only included in one set. 
 *	There were no missing data.
-*	Features were already normalized and did not need rescaling
-
+*	Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
 ![Table 2](/images/Table2.png)
-
-    The range of the features statistics:
-
-![Table 3](/images/Table3.png)
+<img src="/images/Table3.png" width=400>
 
 *	The dataset was imbalanced with only small percentage of total observations (1% or less) in each transitional activity group. Therefore, the modeling problem can be defined as multi-class classification with imbalanced data.
 
-![Table 4](/images/Table4.png)
+<img src="/images/Table4.png" width=600>
 
 * The distribution of observations across different classes were similar between the train and test set.
 
@@ -49,14 +49,14 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 
 ![Figure 2](/images/fig2.png)
 
-* The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction.
+* The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
 
 ![Figure 3](/images/fig3.png)
 
 <br>
 
 ## Training Classification Models
-Models were evaluated using 5-fold cross-validation with 10 repeats. The mean accuracy was then used to compare different models.
+Models were evaluated using 5-fold cross-validation with 3 repeats. The mean accuracy was then used to compare different models.
 
 ### Baseline Model
 For comparison, a dummy classifier that used the most-frequent class as the basis for classification was selected as the baseline model and achieved the mean accuracy of 0.183.
@@ -76,7 +76,7 @@ The following table shows the model accuracies with imbalanced data (column 1), 
 ### Hyperparameter Tuning for Cost-Sensitive Algorithms
 The following cost-sensitive models (by setting the class_weight parameter of the model to 'balanced', to account for the imbalance) were tuned for model parameters and compared:
 
-![Table 6](/images/Table6.png)
+<img src="/images/Table6.png" width=400>
 
 Eventually Support Vector Classifier (with linear kernel) was selected for prediction on the test set.
 
