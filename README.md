@@ -31,27 +31,19 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 <br>
 
 ## Exploratory Data Analysis
-*	There were no common subjects between the train and test sets and all records of each subject were only included in one set. 
-*	There were no missing data.
-*	Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
+There were no common subjects between the train and test sets and all records of each subject were only included in one set. 
+There were no missing data.
+Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
 ![Table 2](/images/Table2.png)
 <img src="/images/Table3.png" width=400>
-
-*	The dataset was imbalanced with only small percentage of total observations (1% or less) in each transitional activity group. Therefore, the modeling problem can be defined as multi-class classification with imbalanced data.
-
+The dataset was imbalanced with only small percentage of total observations (1% or less) in each transitional activity group. Therefore, the modeling problem can be defined as multi-class classification with imbalanced data.
 <img src="/images/Table4.png" width=600>
-
-* The distribution of observations across different classes were similar between the train and test set.
-
+The distribution of observations across different classes were similar between the train and test set.
 ![Figure 1](/images/fig1.png)
-
-* A number of features were highly correlated with each other. The following figure shows features with correlations above 0.60.
-
+A number of features were highly correlated with each other. The following figure shows features with correlations above 0.60.
 ![Figure 2](/images/fig2.png)
-
-* The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
-
-![Figure 3](/images/fig3.png)
+The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
+[Figure 3](/images/fig3.png)
 
 <br>
 
