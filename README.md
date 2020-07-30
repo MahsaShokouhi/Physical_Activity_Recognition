@@ -34,7 +34,6 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 * Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
 
 ![Table 2](/images/Table2.png)
-
 ![Table 3](/images/Table3.png)
 
 
