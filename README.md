@@ -52,7 +52,7 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 
 * The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
 
-[Figure 3](/images/fig3.png)
+![Figure 3](/images/fig3.png)
 
 
 <br>
