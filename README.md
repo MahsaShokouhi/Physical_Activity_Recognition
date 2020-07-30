@@ -18,9 +18,7 @@ The provided data was already divided in train and test sets which included 7767
 *	X.txt: with 561 features representing body motion parameters for each observation.
 *	y.txt: target variable ranging from 1 to 12, each corresponding to an activity group.
 
-
 <img src="/images/Table1.png" width=500>
-
 
 The goal was to build the classification model which gives highest accuracy with cross-validation on the train set, and then use this model to predict the activity type on the test set.
 
@@ -31,19 +29,31 @@ A set of statistics on these parameters were used to obtain a 561-feature vector
 <br>
 
 ## Exploratory Data Analysis
-There were no common subjects between the train and test sets and all records of each subject were only included in one set. 
-There were no missing data.
-Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
+* There were no common subjects between the train and test sets and all records of each subject were only included in one set.
+* There were no missing data.
+* Features were already normalized and did not need rescaling. The following two tables show the distribution statistics for each feature and the range of these statistics accross all features.
+
 ![Table 2](/images/Table2.png)
-<img src="/images/Table3.png" width=400>
-The dataset was imbalanced with only small percentage of total observations (1% or less) in each transitional activity group. Therefore, the modeling problem can be defined as multi-class classification with imbalanced data.
-<img src="/images/Table4.png" width=600>
-The distribution of observations across different classes were similar between the train and test set.
+
+![Table 3](/images/Table3.png)
+
+
+* The dataset was imbalanced with only small percentage of total observations (1% or less) in each transitional activity group. Therefore, the modeling problem can be defined as multi-class classification with imbalanced data.
+
+![Table 4](/images/Table4.png)
+
+* The distribution of observations across different classes were similar between the train and test set.
+
 ![Figure 1](/images/fig1.png)
-A number of features were highly correlated with each other. The following figure shows features with correlations above 0.60.
+
+* A number of features were highly correlated with each other. The following figure shows features with correlations above 0.60.
+
 ![Figure 2](/images/fig2.png)
-The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
+
+* The following figure shows the clusters of activity groups using the first two components of linear discriminant analysis for dimensionality reduction. As can be seen, there is a considerable overlap between clusters corresponding to "Sitting" and "Standing". Also, clusters corresponding to "Walking", "Walking-downstairs", and "Walking-upstairs" considerably overlap, Whereas the "Laying" cluster is separate. The clusters of transitional postures are seen between the above-mentioned, basic activities.
+
 [Figure 3](/images/fig3.png)
+
 
 <br>
 
@@ -68,7 +78,7 @@ The following table shows the model accuracies with imbalanced data (column 1), 
 ### Hyperparameter Tuning for Cost-Sensitive Algorithms
 The following cost-sensitive models (by setting the class_weight parameter of the model to 'balanced', to account for the imbalance) were tuned for model parameters and compared:
 
-<img src="/images/Table6.png" width=400>
+![Table 6](/images/Table6.png)
 
 Eventually Support Vector Classifier (with linear kernel) was selected for prediction on the test set.
 
